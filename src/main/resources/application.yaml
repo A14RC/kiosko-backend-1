@@ -3,14 +3,12 @@ spring:
     name: kiosko-backend
 
   datasource:
-    # Conexión a la base de datos 'kiosko_db' en el puerto 5432 (según  docker-compose)
-    url: jdbc:postgresql://localhost:5432/kiosko_db
+    url: jdbc:postgresql://localhost:5433/kiosko_db
     username: postgres
     password: admin
     driver-class-name: org.postgresql.Driver
 
   jpa:
-    # 'update' crea las tablas automáticamente si no existen
     hibernate:
       ddl-auto: update
     show-sql: true
