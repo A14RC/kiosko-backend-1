@@ -3,15 +3,15 @@ version: '3.8'
 services:
   kiosko_db:
     image: postgres:15
-    container_name: kiosko_postgres_nuevo  # Nombre nuevo para evitar conflictos
+    container_name: kiosko_postgres_nuevo
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: admin
       POSTGRES_DB: kiosko_db
     ports:
-      - "5433:5432"  # ¡OJO! Cambie el puerto externo al 5433
+      - "5433:5432"  # puerto externo  5433
     volumes:
-      - kiosko_data_v2:/var/lib/postgresql/data # Volumen nuevo y limpio
+      - kiosko_data_v2:/var/lib/postgresql/data
 
 volumes:
-  kiosko_data_v2: # Definición del nuevo volumen
+  kiosko_data_v2:

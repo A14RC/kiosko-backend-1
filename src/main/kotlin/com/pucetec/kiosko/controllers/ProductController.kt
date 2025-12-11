@@ -19,4 +19,15 @@ class ProductController(
     fun guardarProducto(@RequestBody product: Product): Product {
         return productService.createProduct(product)
     }
+
+    @PutMapping("/{id}")
+    fun actualizarProducto(@PathVariable id: Long, @RequestBody product: Product): Product {
+        return productService.updateProduct(id, product)
+    }
+
+    @DeleteMapping("/{id}")
+    fun eliminarProducto(@PathVariable id: Long) {
+        productService.deleteProduct(id)
+    }
+
 }
